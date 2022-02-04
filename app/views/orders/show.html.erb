@@ -1,13 +1,80 @@
 <section class="orders-show">
+<%# because ---orders_controller.rb--- has @order in ---show action/method you have reference to it here, it was passed down, see schema file to understand what information is available in the instance variable 
 
+check model (order.rb) you can see it has many line items tied to one record of an order
+
+To see what form line_item takes.... 
+
+in terminal you can see what is being accessed
+
+rails console // a command in your terminal to run the next few lines and see what the data looks like 
+
+order = Order.find 1  //looking for order with id 1 
+order.line_items   // now looking for order with id 1's line items 
+
+//
+
+YOU CAN SEE line_items IS AN ARRAY SO MUST LOOP
+
+[#<LineItem id: 1, order_id: 1, product_id: 9, quantity: 1, item_price_cents: 202629, total_price_cents: 202629, created_at: "2022-02-03 20:18:37", updated_at: "2022-02-03 20:18:37">, #<LineItem id: 2, order_id: 1, product_id: 12, quantity: 2, item_price_cents: 248375, total_price_cents: 496750, created_at: "2022-02-03 20:18:37", updated_at: "2022-02-03 20:18:37">]
+
+
+YOU CAN SEE ORDER IS OBJECT
+
+#<Order id: 1, total_cents: 699379, created_at: "2022-02-03 20:18:37", updated_at: "2022-02-03 20:18:37", stripe_charge_id: "ch_3KPBlJFD5I57u9h21ZXlr5Ak", email: "kvirani@gmail.com"> 
+
+
+%>
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+    <h1>Order #<%= @order.id %> Details</h1>
+
+      <%# 
+      @order.id   
+      @order.total_cents
+      @order.email
+      @order.line_items
+       %>
+  
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <%# <h4>Thank you for your order!</h4> %>
+    <%# render 'line_item' %>
+    <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+       <tr>
+          <th colspan="1">Account:</th>
+          <th><%=@order.email%></th>
+        </tr>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @order.line_items.each do |line_item| %>
+        <%= render 'line_item', line_item: line_item %> <%# this line renders partial but line above makes you loop the render %>
+      <% end %>
+      </tbody>
+          <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+            <%= number_to_currency(@order.total_cents/ 100.0) %>
+          </th>
+          
+        </tr>
+      </tfoot>
+    </table>
   </div>
+
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
+

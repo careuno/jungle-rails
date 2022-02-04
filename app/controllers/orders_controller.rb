@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+   #active record retrieving db data, store in instance variable then passed to view show
   end
 
   def create
