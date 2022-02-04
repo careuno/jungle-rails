@@ -1,2 +1,42 @@
+
+
+
+<%# 
 <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
+ %>
+
+
+<h1>Admin Dashboard</h1>
+<br>
+<br>
+<br>
+
+
+<div class="order-summary jumbotron">
+<br>
+<br>
+    <div class="panel panel-default items">
+    
+    <table class="table table-bordered">
+      <thead>
+       <tr>
+          <th colspan="2">NUMBER OF PRODUCTS:</th>
+          <th>NUMBER OF CATEGORIES</th>
+      
+        </tr>
+        <tr>
+          <th colspan="2"><p><%=  @num_products %></p></th>
+          <th><p><%=  @num_category %></p></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+<br>
+<br>
+<br>
+<%= link_to "Edit Inventory", admin_products_path, class: 'btn btn-lg btn-primary' %>
+<br>
+<br>
+
+   
