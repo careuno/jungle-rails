@@ -10,7 +10,15 @@
 
   <%= render 'layouts/top_nav' %>
 
+  
   <main class="container">
+  
+    <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+     <% end %>
+
     <%= yield %>
   </main>
 

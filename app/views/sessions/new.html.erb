@@ -1,0 +1,17 @@
+<h3>Login</h3>
+
+<%= form_tag '/login' do %>
+
+    <div class="mb-3 align-self-center">
+      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <div><%= text_field_tag :email %><div>
+    </div>
+    <div class="mb-3 align-self-center">
+      <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+     <div> <%= password_field_tag :password %><div>
+    </div>
+
+ <br>
+  <%= submit_tag "Login" %>
+
+<% end %>
