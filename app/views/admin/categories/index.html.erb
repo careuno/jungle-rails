@@ -1,0 +1,35 @@
+Categories
+
+
+<section class="admin-categories-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; All Categories</h1>
+  </header>
+
+  <div class="well">
+    <%= link_to '+ Add Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+
+  <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @categories.each do |category| %>
+            <tr><td> <%= category.name %></td></tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+      
+  <%# #<Category id: 1, name: "Apparel", created_at: "2022-02-03 20:17:30", updated_at: "2022-02-03 20:17:30"> 
+2.6.6 :002 >  %>
+
+</section>
