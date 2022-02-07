@@ -1,30 +1,32 @@
-<div class="login-center">
+<h3 class="text-center">Sign Up</h3>
+  <div class="row">
+    <div class="col-sm">
+    <%= form_for :user, url: '/users', html:{class:"form"} do |f| %>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">First Name</label>
+          <div><%= f.text_field :first_name, class:"form-control" %></div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Last Name</label>
+        <div> <%= f.text_field :last_name, class:"form-control" %><div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <div><%= f.text_field :email, class:"form-control" %><div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+          <div><%= f.password_field :password, class:"form-control" %><div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Password Confirmation</label>
+          <div><%= f.password_field :password_confirmation, class:"form-control" %><div>
+        </div>
+        <br>
+          <%= f.submit "Sign Up" %>
+      <% end %>
+    </div>
+  </div>
 
-<h3>Signup</h3>
 
-<%= form_for :user, url: '/users' do |f| %>
-    <div class="mb-3 align-self-center">
-      <label for="exampleFormControlInput1" class="form-label">First Name</label>
-      <div><%= f.text_field :first_name %><div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Last Name</label>
-     <div> <%= f.text_field :last_name %><div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Email</label>
-      <div><%= f.text_field :email %><div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-      <div><%= f.password_field :password %><div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Password Confirmation</label>
-       <div><%= f.password_field :password_confirmation %><div>
-    </div>
-    <br>
-      <%= f.submit "Sign Up" %>
-      
-<% end %>
-</div>
+
+
