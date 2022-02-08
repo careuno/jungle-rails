@@ -1,7 +1,6 @@
 require 'rails_helper'
 require 'product'
 
-#@product = @category.products.create!({ })
 
 describe Product, type: :model do
   describe 'Validations' do
