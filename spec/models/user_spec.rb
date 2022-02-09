@@ -50,6 +50,7 @@ describe User, type: :model do
   end
 end
 
+#when describing class methods use a . so '.authenticate...'
 describe '.authenticate_with_credentials' do
  it 'will login the user with valid email and password' do
   #User.create combines both .new and .save when you have all the form fields you need, if you want to build the user incrementally then you'd use .save seperately, you could have changed all the tests above to use only .create
