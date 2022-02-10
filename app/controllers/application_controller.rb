@@ -42,4 +42,10 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
+  def authenticate
+    authenticate_or_request_with_http_basic do |id, password|
+      id == ENV['HTTP_USER'] && password == ENV['HTTP_PASS']
+    end
+  end
+
 end

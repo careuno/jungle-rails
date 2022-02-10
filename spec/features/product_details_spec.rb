@@ -38,13 +38,3 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     
   end
   
-  
-        #product = page.first('article.product').find_link('Details').trigger('click')
-      #product = page.first('article.product').find_link('Details')
-  #page.first.find_link('Details').click # The browser raised a syntax error while trying to evaluate css selector ""
-  #page.find_link('Details').first.trigger('click') #Ambiguous match, found 10 elements matching visible link "Details"
-  #first('Details').trigger('click') #expected to find css "Details" at least 1 time but there were no matches
- 
-  #Capybara.match = first #  The browser raised a syntax error while trying to evaluate css selector ""   
-  #find_link("Details").trigger("click") # Ambiguous match, found 10 elements matching visible link "Details"
-
