@@ -4,7 +4,8 @@ A mini e-commerce application with an Admin Dashboard to add and remove products
 
 
 ## Final Product
-
+https://github.com/careuno/jungle-rails/blob/master/docs/jungle-demo.mov
+https://github.com/careuno/jungle-rails/blob/master/docs/jungle-admin.mov
 
 
 ## Additional Steps for Apple M1 Machines
