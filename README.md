@@ -5,8 +5,6 @@ A mini e-commerce application with an Admin Dashboard to add and remove products
 
 ## Final Product
 
-
-
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
