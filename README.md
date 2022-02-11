@@ -1,6 +1,11 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application with an Admin Dashboard to add and remove products from the online store. Built with Rails 4.2.
+
+
+## Final Product
+
+
 
 ## Additional Steps for Apple M1 Machines
 
@@ -31,3 +36,28 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* Bcrypt 3.1.7
+* Bootstrap-sass 3.3.6
+* Byebug
+* Capybara
+* Carrierwave
+* Database_cleaner
+* Dotenv-rails
+* Faker
+* Font-awesome-rails
+* jbuilder (~> 2.0)
+* jQuery-rails
+* Money-rails
+* Newrelic_rpm
+* Poltergeist
+* Puma
+* Quiet_assets
+* Rails_12factor
+* rmagick
+* rSpec-rails (~> 3.5)
+* SASS-rails (~> 5.0)
+* sdoc (~> 0.4.0)
+* Spring
+* turbolinks
+* Uglifier (>= 1.3.0)
+* Web-console (~> 2.0)
